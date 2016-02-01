@@ -1,10 +1,11 @@
 import java.util.Arrays;
 import java.util.Scanner;
+//Updated Master Password
 
 public class SortingAlgo {
 	
 	static Scanner num;
-	//Updated Password Setting
+	
 	static int[] selectionSorting(int arr[]){
 		for(int i=0; i<arr.length-1;i++)
 		{
