@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class SortingAlgo {
 	
 	static Scanner num;
-	//Updated
+	//Updated Password
 	static int[] selectionSorting(int arr[]){
 		for(int i=0; i<arr.length-1;i++)
 		{
