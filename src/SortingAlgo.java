@@ -3,10 +3,10 @@ import java.util.Scanner;
 //Updated Master Password
 
 public class SortingAlgo {
-	
+
 	static Scanner num;
-	
-	static int[] selectionSorting(int arr[]){
+
+	static int[] selectionSort(int arr[]){
 		for(int i=0; i<arr.length-1;i++)
 		{
 			int index=i;
@@ -23,8 +23,8 @@ public class SortingAlgo {
 		}
 		return arr;
 	}
-	
-	static void insertionSorting(int [] arr)
+
+	static void insertionSort(int [] arr)
 	{
 		for (int i = 1; i < arr.length; i++) {
 			int valueToSort = arr[i];
@@ -37,7 +37,7 @@ public class SortingAlgo {
 			System.out.println("Sorting: "+i+" Array "+Arrays.toString(arr));
 		}
 	}
-	
+
 	static void mergeSort(int[] arr) {
 		int size = arr.length;
 		if (size < 2)
@@ -47,9 +47,9 @@ public class SortingAlgo {
 		int rightSize = size - mid;
 		int[] left = new int[leftSize];
 		int[] right = new int[rightSize];
-		for (int i = 0; i < mid; i++) {
+		for (int i = 0; i < mid; i++) 
+		{
 			left[i] = arr[i];
-
 		}
 		for (int i = mid; i < size; i++) {
 			right[i - mid] = arr[i];
@@ -58,7 +58,7 @@ public class SortingAlgo {
 		mergeSort(right);
 		merge(left, right, arr);
 	}
-	
+
 	static void merge(int[] left, int[] right, int[] arr) {
 		int leftSize = left.length;
 		int rightSize = right.length;
@@ -90,25 +90,34 @@ public class SortingAlgo {
 		num = new Scanner(System.in);
 		System.out.println("Enter the number of elements of the array");
 		int n = num.nextInt();
-		int []arr1 = new int[n];
+/*		int []arr1 = new int[n];
 		System.out.println("Enter the array for Selection Sorting");
 		for (int i=0; i<n ; i++)
 		{
 			arr1[i] = num.nextInt();
 		}
 		System.out.println("Before Selection Sorting: "+Arrays.toString(arr1));
-		arr1 = selectionSorting(arr1);
+		arr1 = selectionSort(arr1);
 		System.out.println("After Selection Sorting: "+Arrays.toString(arr1));
 		System.out.println("-------------------------------------");
-		System.out.println("Enter the array for Insertion Sorting");
 		int []arr2 = new int[n];
+		System.out.println("Enter the array for Insertion Sorting");
 		for (int i=0; i<n ; i++)
 		{
 			arr2[i] = num.nextInt();
 		}
 		System.out.println("Before Insertion Sorting: "+Arrays.toString(arr2));
-		insertionSorting(arr2);
+		insertionSort(arr2);
 		System.out.println("After Insertion Sorting: "+Arrays.toString(arr2));
-
+*/		System.out.println("-------------------------------------");
+		int []arr3 = new int[n];
+		System.out.println("Enter the array for Merge Sorting");
+		for (int i=0; i<n ; i++)
+		{
+			arr3[i] = num.nextInt();
+		}
+		System.out.println("Before Insertion Sorting: "+Arrays.toString(arr3));
+		mergeSort(arr3);
+		System.out.println("After Insertion Sorting: "+Arrays.toString(arr3));
 	}
 }
