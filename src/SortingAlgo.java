@@ -6,19 +6,22 @@ public class SortingAlgo {
 	
 	static Scanner num;
 	
+	static void swap(int a, int b, int [] arr){
+		int temp = arr[a];
+			arr[a] = arr[b];
+			arr[b] = temp;
+	}
+	
 	static int[] selectionSorting(int arr[]){
 		for(int i=0; i<arr.length-1;i++)
 		{
 			int index=i;
 			for(int j=i+1; j<arr.length;j++)
-
 				if(arr[j]<arr[index])
 				{
 					index=j;
 				}
-			int small = arr[index];
-			arr[index] = arr[i];
-			arr[i]=small;
+			swap(index,i,arr);
 			System.out.println("Sorting: "+(i+1)+" Array "+Arrays.toString(arr));
 		}
 		return arr;
@@ -87,6 +90,19 @@ public class SortingAlgo {
 	}
 
 	public static void main(String arg[]){
+		
+		int a = 1;
+		int b = 2;
+		int [] arr ={1,2,3};
+		System.out.println("Swap: Pass by Value");
+		System.out.println("x "+arr[a]);
+		System.out.println("y "+arr[b]);
+		System.out.println(Arrays.toString(arr));
+		swap(a,b,arr);
+		System.out.println("Swap between x and y ");
+		System.out.println("x "+arr[a]);
+		System.out.println("y "+arr[b]);
+		System.out.println(Arrays.toString(arr));
 		num = new Scanner(System.in);
 		System.out.println("Enter the number of elements of the array");
 		int n = num.nextInt();
