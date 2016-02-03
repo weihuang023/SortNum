@@ -11,8 +11,6 @@ public class SortingAlgo {
 			arr[a] = arr[b];
 			arr[b] = temp;
 	}
-
-
 	static int[] selectionSort(int arr[]){
 		for(int i=0; i<arr.length-1;i++)
 		{
@@ -107,7 +105,7 @@ public class SortingAlgo {
 		num = new Scanner(System.in);
 		System.out.println("Enter the number of elements of the array");
 		int n = num.nextInt();
-/*		int []arr1 = new int[n];
+		int []arr1 = new int[n];
 		System.out.println("Enter the array for Selection Sorting");
 		for (int i=0; i<n ; i++)
 		{
@@ -126,7 +124,7 @@ public class SortingAlgo {
 		System.out.println("Before Insertion Sorting: "+Arrays.toString(arr2));
 		insertionSort(arr2);
 		System.out.println("After Insertion Sorting: "+Arrays.toString(arr2));
-*/		System.out.println("-------------------------------------");
+		System.out.println("-------------------------------------");
 		int []arr3 = new int[n];
 		System.out.println("Enter the array for Merge Sorting");
 		for (int i=0; i<n ; i++)
